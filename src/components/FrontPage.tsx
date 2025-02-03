@@ -3,10 +3,10 @@ import { Button, Card, CardContent, Typography } from '@mui/material';
 import { IJoke } from '../types';
 
 interface FrontPageProps {
-    addJokeToSaved?: (joke: IJoke) => void
+    saveJoke?: (joke: IJoke) => void
 }
 
-function FrontPage({addJokeToSaved}: FrontPageProps) {
+function FrontPage({saveJoke}: FrontPageProps) {
   const [joke, setJoke] = useState<IJoke | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -30,9 +30,9 @@ function FrontPage({addJokeToSaved}: FrontPageProps) {
     };
   };
 
-  const saveJoke = () => {
-    if(joke && addJokeToSaved && joke.id !== undefined) {
-        addJokeToSaved(joke)
+  const handleSaveJoke = () => {
+    if(joke && saveJoke) {
+        saveJoke(joke)
     }
   }
 
@@ -61,7 +61,7 @@ function FrontPage({addJokeToSaved}: FrontPageProps) {
       <Button variant="contained" color="primary" onClick={fetchJoke} sx={{ marginTop: 2 }}>
         Get Joke
       </Button>
-      <Button variant="contained" color="primary" onClick={saveJoke} sx={{ marginTop: 2, marginLeft: 2 }}>
+      <Button variant="contained" color="primary" onClick={handleSaveJoke} sx={{ marginTop: 2, marginLeft: 2 }}>
         Save Joke
       </Button>
     </div>

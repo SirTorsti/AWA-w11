@@ -4,7 +4,7 @@ import { IJoke } from '../types';
 export const useJokes = () => {
     const [savedJokes, setSavedJokes] = useState<IJoke[]>([])
 
-    const addJokeToSaved = (joke: IJoke) => {
+    const saveJoke = (joke: IJoke) => {
         setSavedJokes((prevJokes) => [...prevJokes, joke])
     }
 
@@ -15,7 +15,7 @@ export const useJokes = () => {
 
     return {
         savedJokes,
-        addJokeToSaved,
+        saveJoke,
         deleteJoke
     }
 }
