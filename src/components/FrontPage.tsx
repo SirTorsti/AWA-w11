@@ -31,7 +31,7 @@ function FrontPage({addJokeToSaved}: FrontPageProps) {
   };
 
   const saveJoke = () => {
-    if(joke && addJokeToSaved) {
+    if(joke && addJokeToSaved && joke.id !== undefined) {
         addJokeToSaved(joke)
     }
   }
