@@ -4,7 +4,7 @@ import ResponsiveAppBar from './components/Header.tsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import FrontPage from './components/FrontPage'
 import SavedPage from './components/SavedPage'
-import useJokes from './hooks/useJokes'
+import {useJokes} from './hooks/useJokes'
 
 const App: React.FC = () => {
 

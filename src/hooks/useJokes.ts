@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { IJoke } from '../types';
 
-const useJokes = () => {
+export const useJokes = () => {
     const [savedJokes, setSavedJokes] = useState<IJoke[]>([])
 
     const addJokeToSaved = (joke: IJoke) => {
@@ -20,4 +20,3 @@ const useJokes = () => {
     }
 }
 
-export default useJokes

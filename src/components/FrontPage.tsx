@@ -59,10 +59,10 @@ function FrontPage({addJokeToSaved}: FrontPageProps) {
         )
       )}
       <Button variant="contained" color="primary" onClick={fetchJoke} sx={{ marginTop: 2 }}>
-        Get joke
+        Get Joke
       </Button>
       <Button variant="contained" color="primary" onClick={saveJoke} sx={{ marginTop: 2, marginLeft: 2 }}>
-        Save joke
+        Save Joke
       </Button>
     </div>
   );
