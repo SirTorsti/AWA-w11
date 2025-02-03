@@ -11,7 +11,6 @@ const App: React.FC = () => {
   const jokesHook = useJokes()
 
   return (
-    <div>
       <BrowserRouter>
         <ResponsiveAppBar />
         <Routes>
@@ -19,7 +18,6 @@ const App: React.FC = () => {
           <Route path="/saved" element={<SavedPage {...jokesHook} />} />
         </Routes> 
       </BrowserRouter>
-    </div>
   )
 }
 

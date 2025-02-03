@@ -3,7 +3,7 @@ import { Button, Card, CardContent, Typography } from '@mui/material';
 import { IJoke } from '../types';
 
 interface FrontPageProps {
-    addJokeToSaved: (joke: IJoke) => void
+    addJokeToSaved?: (joke: IJoke) => void
 }
 
 function FrontPage({addJokeToSaved}: FrontPageProps) {
@@ -31,7 +31,7 @@ function FrontPage({addJokeToSaved}: FrontPageProps) {
   };
 
   const saveJoke = () => {
-    if(joke) {
+    if(joke && addJokeToSaved) {
         addJokeToSaved(joke)
     }
   }
