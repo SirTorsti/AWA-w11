@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { IJoke } from '../types';
 
 export const useJokes = () => {
-    const [savedJokes, setSavedJokes] = useState<IJoke[]>([])
+    const [saveJokes, setSavedJokes] = useState<IJoke[]>([])
 
     const addJokeToSaved = (joke: IJoke) => {
         setSavedJokes((prevJokes) => [...prevJokes, joke])
@@ -14,7 +14,7 @@ export const useJokes = () => {
     }
 
     return {
-        savedJokes,
+        saveJokes,
         addJokeToSaved,
         deleteJoke
     }
